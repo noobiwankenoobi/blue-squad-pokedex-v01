@@ -1,10 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
-import SearchPokemon from "./components/SearchPokemon";
+import SearchBar from "./components/SearchBar";
 
 function App() {
-  return <SearchPokemon />;
+  return (
+    <div className="App">
+      <SearchBar />
+    </div>
+  );
 }
 
 export default App;

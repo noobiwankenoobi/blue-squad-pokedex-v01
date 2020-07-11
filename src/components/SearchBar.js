@@ -4,10 +4,18 @@ import axios from "axios";
 const SearchBar = (props) => {
   // Sets SearchBar state
   const [searchString, setSearchString] = useState("");
-  const [currentPokemon, setCurrentPokemon] = useState({});
+  // Sets currentPokemon state
+  // const [currentPokemon, setCurrentPokemon] = useState({});
+  const {
+    currentPokemon: [currentPokemon, setCurrentPokemon],
+  } = {
+    currentPokemon: useState({}),
+    ...(props.state || {}),
+  };
 
   // Takes data back from api call, sets the currentPokemon in the state
   const handleData = (data) => {
+    // Create a pokemon object with only the parts of the returned data you need
     const pokemon = {
       name: data.name,
       id: data.id,
@@ -16,6 +24,7 @@ const SearchBar = (props) => {
       imageUrl: data.species.url,
     };
 
+    //
     setCurrentPokemon(pokemon);
     console.log("Pokemon =", pokemon);
   };
@@ -39,6 +48,7 @@ const SearchBar = (props) => {
         // sorry, pokemon not found
         console.error(err);
       });
+    setSearchString("");
   };
 
   // TODO: reset the search input and state after submit

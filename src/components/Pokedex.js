@@ -7,7 +7,7 @@ function Pokedex(props) {
       <h1>Height: {props.currentPokemon.height}</h1>
       <h1>Weight: {props.currentPokemon.weight}</h1>
       <h1>Id: {props.currentPokemon.id}</h1>
-      <h1>ImageUrl: {props.currentPokemon.imageUrl}</h1>
+      <img src={props.currentPokemon.imageUrl} alt="pokemon"></img>
     </div>
   );
 }

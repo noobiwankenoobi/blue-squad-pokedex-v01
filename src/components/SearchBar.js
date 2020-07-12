@@ -21,7 +21,7 @@ const SearchBar = (props) => {
       id: data.id,
       height: data.height,
       weight: data.weight,
-      imageUrl: data.species.url,
+      imageUrl: data.sprites.front_default,
     };
 
     //

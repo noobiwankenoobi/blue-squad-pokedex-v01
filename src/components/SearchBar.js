@@ -5,7 +5,6 @@ const SearchBar = (props) => {
   // Sets SearchBar state
   const [searchString, setSearchString] = useState("");
   // Sets currentPokemon state
-  // const [currentPokemon, setCurrentPokemon] = useState({});
   const {
     currentPokemon: [currentPokemon, setCurrentPokemon],
   } = {
@@ -41,7 +40,7 @@ const SearchBar = (props) => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${searchString}`)
       .then((res) => {
-        console.log(res.data);
+        console.log("res.data =", res.data);
         handleData(res.data);
       })
       .catch((err) => {
@@ -61,7 +60,7 @@ const SearchBar = (props) => {
         type="text"
         className="input"
         id="addInput"
-        placeholder="Seach for Pokemon"
+        placeholder="Seach for a Pokemon!"
         value={searchString}
         onChange={onChange}
       />
@@ -72,7 +71,7 @@ const SearchBar = (props) => {
   );
 
   // RETURN JSX
-  return searchForm;
+  return <div className="searchbar">{searchForm}</div>;
 };
 
 export default SearchBar;

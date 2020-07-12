@@ -1,3 +1,16 @@
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: white;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -7,12 +20,74 @@
   height: 100vh;
 }
 
-.pokedex {
-  height: 50vh;
-  width: 50vw;
+.searchbar {
+  height: 5rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-img {
-  max-width: 300px;
-  min-width: 300px;
+.pokedex {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokedex-card {
+  border: 1px solid black;
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: lightcoral;
+}
+
+.img-section {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  object-fit: contain;
+  height: 14rem;
+  width: 16rem;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+  background: lightblue;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sprite-img {
+  height: 14rem;
+  width: 14rem;
+}
+
+.info-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-box {
+  width: 16rem;
+  height: 14rem;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-
+// Styles
 import "./App.css";
+// Components
 import SearchBar from "./components/SearchBar";
 import Pokedex from "./components/Pokedex";
 
@@ -9,10 +10,10 @@ function App() {
 
   return (
     <div className="App">
-      <Pokedex currentPokemon={currentPokemon} />
       <SearchBar
         state={{ currentPokemon: [currentPokemon, setCurrentPokemon] }}
       />
+      <Pokedex currentPokemon={currentPokemon} />
     </div>
   );
 }

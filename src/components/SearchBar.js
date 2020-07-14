@@ -29,7 +29,7 @@ const SearchBar = (props) => {
   };
 
   // onChange of search bar input
-  const onChange = (e) => {
+  const handleChange = (e) => {
     setSearchString(e.target.value);
   };
 
@@ -62,7 +62,7 @@ const SearchBar = (props) => {
         id="addInput"
         placeholder="Seach for a Pokemon!"
         value={searchString}
-        onChange={onChange}
+        onChange={handleChange}
       />
       <button className="button" type="submit">
         Search

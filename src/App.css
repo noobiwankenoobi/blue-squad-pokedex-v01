@@ -44,6 +44,7 @@ p {
   justify-content: center;
   align-items: center;
   background: lightcoral;
+  margin: 1rem;
 }
 
 .img-section {

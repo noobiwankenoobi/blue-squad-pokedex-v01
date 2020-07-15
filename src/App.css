@@ -36,6 +36,11 @@ p {
   align-items: center;
 }
 
+.arrow-btn {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
 .pokedex-card {
   border: 1px solid black;
   border-radius: 0.2rem;

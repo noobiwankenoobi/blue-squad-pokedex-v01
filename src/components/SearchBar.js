@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-// Array
+// Array for filter
 import pokeNameArray from "../util/pokenames";
 
 // SEARCHBAR COMPONENT

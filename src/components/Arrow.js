@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 
+// ARROW COMPONENT
 function Arrow(props) {
   const { changeCurrentPokemon, currentPokemonId, direction } = props;
 
@@ -15,17 +16,17 @@ function Arrow(props) {
       imageUrl: data.sprites.front_default,
     };
 
-    //
+    // Sets current pokemon
     changeCurrentPokemon(pokemon);
     console.log("Pokemon =", pokemon);
   };
 
+  // Iterate id of next pokemon up or down 1 based on direction of arrow
   const newPokemonId =
     direction === "right" ? currentPokemonId + 1 : currentPokemonId - 1;
 
-  const onClick = (e) => {
-    e.preventDefault();
-    // Axios Call based on id
+  // API Call by Id
+  const getPokemonById = () => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${newPokemonId}`)
       .then((res) => {
@@ -38,6 +39,18 @@ function Arrow(props) {
       });
   };
 
+  // Makes api call on arrow click, doesn't allow negative Id numbers when clicking left
+  const onClick = (e) => {
+    e.preventDefault();
+    // Axios Call based on id
+    if (currentPokemonId >= 2 && direction === "left") {
+      getPokemonById();
+    } else if (currentPokemonId >= 0 && direction === "right") {
+      getPokemonById();
+    } else return;
+  };
+
+  // JSX of left and right arrow
   const leftArrow = (
     <button className="arrow-btn" onClick={onClick}>
       <i className="fa fa-angle-double-left"></i>
@@ -50,7 +63,7 @@ function Arrow(props) {
     </button>
   );
 
-  // JSX return
+  // JSX return based on direction from props
   return direction === "right" ? rightArrow : leftArrow;
 }
 

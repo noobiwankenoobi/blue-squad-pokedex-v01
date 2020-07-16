@@ -1,30 +1,29 @@
 import React, { useState } from "react";
 import axios from "axios";
+// Array
+import pokeNameArray from "../util/pokenames";
 
+// SEARCHBAR COMPONENT
 const SearchBar = (props) => {
   // Sets SearchBar state
   const [searchString, setSearchString] = useState("");
-  // Sets currentPokemon state
-  const {
-    currentPokemon: [currentPokemon, setCurrentPokemon],
-  } = {
-    currentPokemon: useState({}),
-    ...(props.state || {}),
-  };
+  // Gets currentPokemon setter function from props so it can be called inside SearchBar
+  const { changeCurrentPokemon } = props;
+  // Set lowercase pokemon search input to a constant
+  const search = searchString.toLowerCase();
 
   // Takes data back from api call, sets the currentPokemon in the state
   const handleData = (data) => {
-    // Create a pokemon object with only the parts of the returned data you need
+    // Create a pokemon object with only the parts of the returned data we need
     const pokemon = {
-      name: data.name,
       id: data.id,
+      name: data.name,
       height: data.height,
       weight: data.weight,
       imageUrl: data.sprites.front_default,
     };
-
-    //
-    setCurrentPokemon(pokemon);
+    // Set the current Pokemon to the pokemon object we just created
+    changeCurrentPokemon(pokemon);
     console.log("Pokemon =", pokemon);
   };
 
@@ -36,9 +35,9 @@ const SearchBar = (props) => {
   // onSubmit of search form
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(searchString);
+    console.log(search);
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${searchString}`)
+      .get(`https://pokeapi.co/api/v2/pokemon/${search}`)
       .then((res) => {
         console.log("res.data =", res.data);
         handleData(res.data);
@@ -50,8 +49,7 @@ const SearchBar = (props) => {
     setSearchString("");
   };
 
-  // TODO: reset the search input and state after submit
-  // TODO: consider making an api call on every input change
+  // TODO: consider making an api call on every input change/keystroke
 
   // JSX to be returned
   let searchForm = (

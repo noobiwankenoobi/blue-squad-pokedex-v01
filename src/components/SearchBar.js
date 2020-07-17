@@ -5,12 +5,11 @@ import axios from "axios";
 
 // SEARCHBAR COMPONENT
 const SearchBar = (props) => {
+  // PROPS AND STATE CONSTS
   // Sets SearchBar state
   const [searchString, setSearchString] = useState("");
   // Gets currentPokemon setter function from props so it can be called inside SearchBar
   const { changeCurrentPokemon } = props;
-  // Set lowercase pokemon search input to a constant
-  const search = searchString.toLowerCase();
 
   // Takes data back from api call, sets the currentPokemon in the state
   const handleData = (data) => {
@@ -31,6 +30,9 @@ const SearchBar = (props) => {
   const handleChange = (e) => {
     setSearchString(e.target.value);
   };
+
+  // Set lowercase pokemon search input to a constant
+  const search = searchString.toLowerCase();
 
   // AXIOS Gets Pokemon from search string
   const getPokemonByName = () => {

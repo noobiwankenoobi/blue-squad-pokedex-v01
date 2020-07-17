@@ -7,6 +7,7 @@ import SearchBar from "./components/SearchBar";
 // import SearchBar2 from "./components/SearchBar2";
 import Arrow from "./components/Arrow";
 import PokedexCard from "./components/PokedexCard";
+import Navbar from "./components/Navbar";
 
 // APP COMPONENT
 function App() {
@@ -31,13 +32,19 @@ function App() {
     </div>
   );
 
+  // SEARCHBAR JSX
+  let searchBar = <SearchBar changeCurrentPokemon={setCurrentPokemon} />;
+  // Logic for whether the main searchbar or the pokedex gets rendered
+  let pokedexOrSearch = currentPokemon.name ? pokedexDiv : searchBar;
+
   // RETURNED JSX
   return (
     <div className="App">
-      {/* TOP SEARCHBAR */}
-      <SearchBar changeCurrentPokemon={setCurrentPokemon} />
-      {/* POKEDEX */}
-      {currentPokemon.name ? pokedexDiv : <div></div>}
+      <Navbar
+        changeCurrentPokemon={setCurrentPokemon}
+        currentPokemon={currentPokemon}
+      />
+      {pokedexOrSearch}
     </div>
   );
 }

@@ -1,9 +1,9 @@
-.searchbar-container {
-  width: 100vw;
-  height: 10rem;
+.nav-searchbar-container {
+  height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 3rem;
 }
 
 input {
@@ -11,8 +11,6 @@ input {
   font-style: normal;
   color: grey;
   width: 5rem;
-
-  /* box-sizing: border-box; */
   border: 2px solid grey;
   border-right: 0;
   border-radius: 1rem 0 0 1rem;

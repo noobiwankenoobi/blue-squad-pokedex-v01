@@ -1,21 +1,33 @@
-/* IMPORT CSS FILES */
 /* @import "./css/SearchBar2.scss"; */
-@import "./css/Arrow.css";
-@import "./css/Navbar.css";
-@import "./css/PokedexCard.css";
-@import "./css/SearchBar.css";
-/* FONTS */
-@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
 
 :root {
   font-size: 16px;
 }
 
+/* FONTS */
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
+
 * {
-  margin: 0;
-  padding: 0;
   font-family: "Inconsolata", monospace;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* IMPORT CSS FILES */
+@import "./css/Arrow.css";
+@import "./css/Navbar.css";
+@import "./css/PokedexCard.css";
+@import "./css/SearchBar.css";
+@import "./css/NavSearchBar.css";
 
 .App {
   display: flex;

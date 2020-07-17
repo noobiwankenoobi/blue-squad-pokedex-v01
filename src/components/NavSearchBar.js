@@ -53,39 +53,27 @@ const SearchBar = (props) => {
     setSearchString("");
   };
 
-  let searchForm2 = (
-    <div className="container">
+  // JSX to be returned
+  let searchForm = (
+    <div className="nav-searchbar-container">
       <form className="form" id="searchForPokemon" onSubmit={onSubmit}>
         <input
           type="text"
-          placeholder="Search for a Pokemon!"
+          className="input"
+          id="addInput"
+          placeholder="Search..."
           value={searchString}
           onChange={handleChange}
         />
-        <div className="search"></div>
+        <button className="search-btn" type="submit">
+          <i className="fa fa-search search-icon" aria-hidden="true"></i>
+        </button>
       </form>
     </div>
   );
 
-  // JSX to be returned
-  // let searchForm = (
-  //   <form className="form" id="searchForPokemon" onSubmit={onSubmit}>
-  //     <input
-  //       type="text"
-  //       className="input"
-  //       id="addInput"
-  //       placeholder="Seach for a Pokemon!"
-  //       value={searchString}
-  //       onChange={handleChange}
-  //     />
-  //     <button className="button" type="submit" on>
-  //       Search
-  //     </button>
-  //   </form>
-  // );
-
   // RETURN JSX
-  return searchForm2;
+  return searchForm;
 };
 
 export default SearchBar;

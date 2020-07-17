@@ -12,9 +12,7 @@ const Navbar = (props) => {
 
   return (
     <div className="navbar">
-      <div className="title-container">
-        <Title />
-      </div>
+      <Title />
       <div className="nav-search-container">{searchbar}</div>
     </div>
   );

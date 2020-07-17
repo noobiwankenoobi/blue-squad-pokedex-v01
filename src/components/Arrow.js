@@ -52,15 +52,15 @@ function Arrow(props) {
 
   // JSX of left and right arrow
   const leftArrow = (
-    <button className="arrow-btn" onClick={onClick}>
+    <div className="arrow-btn" onClick={onClick}>
       <i className="fa fa-angle-double-left"></i>
-    </button>
+    </div>
   );
 
   const rightArrow = (
-    <button className="arrow-btn" onClick={onClick}>
+    <div className="arrow-btn" onClick={onClick}>
       <i className="fa fa-angle-double-right"></i>
-    </button>
+    </div>
   );
 
   // JSX return based on direction from props

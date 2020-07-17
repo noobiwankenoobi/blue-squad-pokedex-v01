@@ -66,7 +66,7 @@ const SearchBar = (props) => {
       <form className="form" id="searchForPokemon" onSubmit={onSubmit}>
         <input
           type="text"
-          className="input"
+          className="search-input"
           id="addInput"
           placeholder="Search..."
           value={searchString}

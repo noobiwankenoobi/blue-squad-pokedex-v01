@@ -19,14 +19,22 @@ function PokedexCard(props) {
 
       <div className="info-section">
         <div className="info-box">
-          <p>#</p>
-          <h4>{id}</h4>
-          <p>NAME</p>
-          <h4>{capName}</h4>
-          <p>HEIGHT</p>
-          <h4>{height}</h4>
-          <p>WEIGHT</p>
-          <h4>{weight}</h4>
+          <div className="info-row">
+            <h2 className="info-field-title">#</h2>
+            <h2 className="info-field-content">{id}</h2>
+          </div>
+          <div className="info-row">
+            <p className="info-field-title">Name</p>
+            <h3 className="info-field-content">{capName}</h3>
+          </div>
+          <div className="info-row">
+            <p className="info-field-title">Height</p>
+            <h3 className="info-field-content">{height}</h3>
+          </div>
+          <div className="info-row">
+            <p className="info-field-title">Weight</p>
+            <h3 className="info-field-content">{weight}</h3>
+          </div>
         </div>
       </div>
     </div>

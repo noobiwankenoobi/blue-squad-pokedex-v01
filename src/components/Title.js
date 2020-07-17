@@ -1,7 +1,11 @@
 import React from "react";
 
 const Title = () => {
-  return <h1>Blue Squad Pokedex</h1>;
+  return (
+    <div className="title-container">
+      <h2 className="title-text">Blue Squad Pokedex</h2>
+    </div>
+  );
 };
 
 export default Title;

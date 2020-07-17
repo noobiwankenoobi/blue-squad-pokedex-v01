@@ -28,12 +28,23 @@ p {
 @import "./css/PokedexCard.css";
 @import "./css/SearchBar.css";
 @import "./css/NavSearchBar.css";
+@import "./css/Title.css";
 
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  /* width: 100vw;
+  height: 100vh; */
+}
+
+.main {
+  margin-top: 2rem;
+  background-color: #3267ad;
   height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -56,16 +56,20 @@ const SearchBar = (props) => {
   // JSX to be returned
   let searchForm = (
     <div className="nav-searchbar-container">
-      <form className="form" id="searchForPokemon" onSubmit={onSubmit}>
+      <form
+        className="nav-search-form"
+        id="searchForPokemon"
+        onSubmit={onSubmit}
+      >
         <input
           type="text"
-          className="input"
+          className="nav-search-input"
           id="addInput"
           placeholder="Search..."
           value={searchString}
           onChange={handleChange}
         />
-        <button className="search-btn" type="submit">
+        <button className="nav-search-btn" type="submit">
           <i className="fa fa-search search-icon" aria-hidden="true"></i>
         </button>
       </form>

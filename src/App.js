@@ -44,7 +44,7 @@ function App() {
         changeCurrentPokemon={setCurrentPokemon}
         currentPokemon={currentPokemon}
       />
-      {pokedexOrSearch}
+      <div className="main">{pokedexOrSearch}</div>
     </div>
   );
 }

@@ -1,3 +1,8 @@
 .title-container {
-  margin-left: 200px;
+  margin-left: 3rem;
+}
+
+.title-text {
+  letter-spacing: 0.2rem;
+  color: #3267ad;
 }

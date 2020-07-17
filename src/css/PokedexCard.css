@@ -6,6 +6,11 @@
   align-items: center;
 }
 
+.pokedex {
+  display: flex;
+  justify-content: center;
+}
+
 .pokedex-card {
   border: 1px solid black;
   border-radius: 0.2rem;
@@ -13,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: lightcoral;
+  background: #ef534f;
   margin: 4rem;
 }
 
@@ -61,4 +66,20 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-field-title {
+  margin-right: 0.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.info-field-content {
+  letter-spacing: 0.1rem;
 }

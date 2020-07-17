@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 // Array for filter
-import pokeNameArray from "../util/pokenames";
+// import pokeNameArray from "../util/pokenames";
 
 // SEARCHBAR COMPONENT
 const SearchBar = (props) => {
@@ -32,10 +32,8 @@ const SearchBar = (props) => {
     setSearchString(e.target.value);
   };
 
-  // onSubmit of search form
-  const onSubmit = (e) => {
-    e.preventDefault();
-    console.log(search);
+  // AXIOS Gets Pokemon from search string
+  const getPokemonByName = () => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${search}`)
       .then((res) => {
@@ -43,13 +41,17 @@ const SearchBar = (props) => {
         handleData(res.data);
       })
       .catch((err) => {
-        // sorry, pokemon not found
+        // "sorry, pokemon not found"
         console.error(err);
       });
-    setSearchString("");
   };
 
-  // TODO: consider making an api call on every input change/keystroke
+  // onSubmit of search form
+  const onSubmit = (e) => {
+    e.preventDefault();
+    getPokemonByName();
+    setSearchString("");
+  };
 
   // JSX to be returned
   let searchForm = (

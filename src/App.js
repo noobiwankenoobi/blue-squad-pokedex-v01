@@ -8,10 +8,11 @@ import PokedexCard from "./components/PokedexCard";
 
 // APP COMPONENT
 function App() {
+  // STATE AND PROPS
   const [currentPokemon, setCurrentPokemon] = useState({});
-
   const { id } = currentPokemon;
 
+  // POKEDEX JSX
   let pokedexDiv = (
     <div className="pokedex">
       <Arrow
@@ -28,6 +29,7 @@ function App() {
     </div>
   );
 
+  // RETURNED JSX
   return (
     <div className="App">
       {/* TOP SEARCHBAR */}

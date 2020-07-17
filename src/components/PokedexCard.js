@@ -21,11 +21,11 @@ function PokedexCard(props) {
         <div className="info-box">
           <p>#</p>
           <h4>{id}</h4>
-          <p>Name</p>
+          <p>NAME</p>
           <h4>{capName}</h4>
-          <p>Height</p>
+          <p>HEIGHT</p>
           <h4>{height}</h4>
-          <p>Weight</p>
+          <p>WEIGHT</p>
           <h4>{weight}</h4>
         </div>
       </div>

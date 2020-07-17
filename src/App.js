@@ -2,11 +2,11 @@ import React, { useState } from "react";
 // Styles
 import "./App.css";
 // Components
-import SearchBar from "./components/SearchBar";
-// import SearchBar2 from "./components/SearchBar2";
-import Arrow from "./components/Arrow";
-import PokedexCard from "./components/PokedexCard";
 import Navbar from "./components/Navbar";
+import SearchBar from "./components/SearchBar";
+import PokedexCard from "./components/PokedexCard";
+import Arrow from "./components/Arrow";
+import Footer from "./components/Footer";
 
 // APP COMPONENT
 function App() {
@@ -33,6 +33,7 @@ function App() {
 
   // SEARCHBAR JSX
   let searchBar = <SearchBar changeCurrentPokemon={setCurrentPokemon} />;
+
   // Logic for whether the main searchbar or the pokedex gets rendered
   let pokedexOrSearch = currentPokemon.name ? pokedexDiv : searchBar;
 
@@ -45,6 +46,7 @@ function App() {
         searchStyle="nav"
       />
       <div className="main">{pokedexOrSearch}</div>
+      <Footer />
     </div>
   );
 }

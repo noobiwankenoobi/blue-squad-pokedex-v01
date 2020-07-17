@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 5rem;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background: transparent;
+  margin-bottom: 0;
+}
+
+.footer-msg-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.footer-msg-wrapper img {
+  height: 3rem;
+  margin-left: 1rem;
+}
+
+.footer-text {
+  opacity: 60%;
+}

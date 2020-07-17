@@ -9,6 +9,7 @@
 
 * {
   font-family: "Inconsolata", monospace;
+  margin: 0;
 }
 
 h1,
@@ -28,22 +29,26 @@ p {
 @import "./css/PokedexCard.css";
 @import "./css/SearchBar.css";
 @import "./css/Title.css";
+@import "./css/Footer.css";
 
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 100vw;
-  height: 100vh; */
+  width: 100vw;
+  height: 100vh;
+  background-color: #3267ad;
+  margin: 0;
 }
 
 .main {
-  margin-top: 2rem;
   background-color: #3267ad;
-  height: 100vh;
+  height: 30rem;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
+  margin-top: 6rem;
 }

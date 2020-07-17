@@ -39,8 +39,6 @@ const SearchBar = (props) => {
       .then((res) => {
         console.log("res.data =", res.data);
         handleData(res.data);
-        // Only sets the form to empty on Success
-        setSearchString("");
       })
       .catch((err) => {
         // "sorry, pokemon not found"
@@ -51,34 +49,43 @@ const SearchBar = (props) => {
   // onSubmit of search form
   const onSubmit = (e) => {
     e.preventDefault();
-    if (!searchString || searchString === "") {
-      return;
-    } else {
-      getPokemonByName();
-    }
+    getPokemonByName();
+    setSearchString("");
   };
 
-  // JSX to be returned
-  let searchForm = (
-    <div className="searchbar-container">
+  let searchForm2 = (
+    <div className="container">
       <form className="form" id="searchForPokemon" onSubmit={onSubmit}>
         <input
           type="text"
-          className="input"
-          id="addInput"
-          placeholder="Search..."
+          placeholder="Search for a Pokemon!"
           value={searchString}
           onChange={handleChange}
         />
-        <button className="search-btn" type="submit">
-          <i className="fa fa-search search-icon" aria-hidden="true"></i>
-        </button>
+        <div className="search"></div>
       </form>
     </div>
   );
 
+  // JSX to be returned
+  // let searchForm = (
+  //   <form className="form" id="searchForPokemon" onSubmit={onSubmit}>
+  //     <input
+  //       type="text"
+  //       className="input"
+  //       id="addInput"
+  //       placeholder="Seach for a Pokemon!"
+  //       value={searchString}
+  //       onChange={handleChange}
+  //     />
+  //     <button className="button" type="submit" on>
+  //       Search
+  //     </button>
+  //   </form>
+  // );
+
   // RETURN JSX
-  return searchForm;
+  return searchForm2;
 };
 
 export default SearchBar;

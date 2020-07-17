@@ -1,6 +1,14 @@
 .arrow-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 5rem;
   padding: 1rem;
   cursor: pointer;
   color: #ffcb01;
+  transition: all ease-in 0.2s;
+}
+
+.arrow-btn:hover {
+  color: #ef534f;
 }

@@ -27,7 +27,6 @@ p {
 @import "./css/Navbar.css";
 @import "./css/PokedexCard.css";
 @import "./css/SearchBar.css";
-@import "./css/NavSearchBar.css";
 @import "./css/Title.css";
 
 .App {

@@ -9,7 +9,7 @@ const SearchBar = (props) => {
   // Sets SearchBar state
   const [searchString, setSearchString] = useState("");
   // Gets currentPokemon setter function from props so it can be called inside SearchBar
-  const { changeCurrentPokemon } = props;
+  const { changeCurrentPokemon, searchStyle } = props;
 
   // Takes data back from api call, sets the currentPokemon in the state
   const handleData = (data) => {
@@ -61,23 +61,41 @@ const SearchBar = (props) => {
   };
 
   // JSX to be returned
-  let searchForm = (
-    <div className="searchbar-container">
-      <form className="form" id="searchForPokemon" onSubmit={onSubmit}>
-        <input
-          type="text"
-          className="search-input"
-          id="addInput"
-          placeholder="Search..."
-          value={searchString}
-          onChange={handleChange}
-        />
-        <button className="search-btn" type="submit">
-          <i className="fa fa-search search-icon" aria-hidden="true"></i>
-        </button>
-      </form>
-    </div>
-  );
+  let searchForm =
+    // If it's the nav searchbar style, give it different class names for slightly different styling
+    searchStyle === "nav" ? (
+      <div className="nav-searchbar-container">
+        <form className="nav-form" id="searchForPokemon" onSubmit={onSubmit}>
+          <input
+            type="text"
+            className="nav-search-input"
+            id="addInput"
+            placeholder="Search..."
+            value={searchString}
+            onChange={handleChange}
+          />
+          <button className="nav-search-btn" type="submit">
+            <i className="fa fa-search nav-search-icon" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    ) : (
+      <div className="searchbar-container">
+        <form className="form" id="searchForPokemon" onSubmit={onSubmit}>
+          <input
+            type="text"
+            className="search-input"
+            id="addInput"
+            placeholder="Search..."
+            value={searchString}
+            onChange={handleChange}
+          />
+          <button className="search-btn" type="submit">
+            <i className="fa fa-search search-icon" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    );
 
   // RETURN JSX
   return searchForm;

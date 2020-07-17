@@ -1,8 +1,15 @@
 .title-container {
   margin-left: 3rem;
+  display: flex;
+  align-items: center;
 }
 
 .title-text {
   letter-spacing: 0.2rem;
   color: #3267ad;
+  margin-left: 1rem;
+}
+
+.title-container img {
+  width: 3rem;
 }

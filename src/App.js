@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 // Styles
 import "./App.css";
-import "./css/SearchBar2.scss";
 // Components
 import SearchBar from "./components/SearchBar";
 // import SearchBar2 from "./components/SearchBar2";
@@ -43,6 +42,7 @@ function App() {
       <Navbar
         changeCurrentPokemon={setCurrentPokemon}
         currentPokemon={currentPokemon}
+        searchStyle="nav"
       />
       <div className="main">{pokedexOrSearch}</div>
     </div>

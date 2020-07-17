@@ -5,6 +5,20 @@
   border-radius: 1rem;
   /* border: 2px solid #ffcb01; */
   box-sizing: border-box;
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+  -ms-animation: fadein 1s; /* Internet Explorer */
+  -o-animation: fadein 1s; /* Opera < 12.1 */
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .search-input {
@@ -13,7 +27,7 @@
   color: grey;
   width: 10rem;
   /* box-sizing: border-box; */
-  border: 2px solid #3267ad;
+  border: 2px solid #ffcb01;
   border-right: 0;
   border-radius: 1rem 0 0 1rem;
   padding: 1rem;
@@ -36,7 +50,7 @@
 
 .search-btn {
   color: #3267ad;
-  border: 2px solid #3267ad;
+  border: 2px solid #ffcb01;
   border-left: 0;
   border-radius: 0 1rem 1rem 0;
   padding: 1rem;
@@ -54,4 +68,62 @@
   color: #07051a;
   font-size: 1.2rem;
   background: transparent;
+}
+
+/* NAV VERSION // NAV VERSION */
+.nav-searchbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  /* border: 2px solid #ffcb01; */
+  box-sizing: border-box;
+  margin-left: 3rem;
+  -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0.5s; /* Firefox < 16 */
+  -ms-animation: fadein 0.5s; /* Internet Explorer */
+  -o-animation: fadein 0.5s; /* Opera < 12.1 */
+  animation: fadein 0.5s;
+}
+
+.nav-search-input {
+  font-size: 1rem;
+  font-style: normal;
+  color: grey;
+  width: 5rem;
+  border: 2px solid #3267ad;
+  border-right: 0;
+  border-radius: 1rem 0 0 1rem;
+  padding: 1rem;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  outline: none;
+  box-shadow: none;
+  letter-spacing: 0.1rem;
+}
+
+.nav-search-input:focus {
+  width: 12rem;
+  border: 0.2rem solid #3267ad;
+  border-right: 0;
+}
+
+.nav-search-input:focus + .nav-search-btn {
+  border: 0.2rem solid #3267ad;
+  border-left: 0;
+}
+
+.nav-search-btn {
+  color: #3267ad;
+  border: 2px solid #3267ad;
+  border-left: 0;
+  border-radius: 0 1rem 1rem 0;
+  padding: 1rem;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  background-color: white;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  font-size: 1rem;
 }

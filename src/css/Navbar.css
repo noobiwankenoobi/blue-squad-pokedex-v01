@@ -8,4 +8,6 @@
   height: 2rem;
   background-color: #ffcb01;
   padding: 2rem;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }

@@ -1,13 +1,16 @@
 import React from "react";
 // Components
-import NavSearchBar from "./NavSearchBar";
+import SearchBar from "./SearchBar";
 import Title from "./Title";
 
 const Navbar = (props) => {
-  const { currentPokemon, changeCurrentPokemon } = props;
+  const { currentPokemon, changeCurrentPokemon, searchStyle } = props;
 
   let searchbar = currentPokemon.name ? (
-    <NavSearchBar changeCurrentPokemon={changeCurrentPokemon} />
+    <SearchBar
+      changeCurrentPokemon={changeCurrentPokemon}
+      searchStyle={searchStyle}
+    />
   ) : null;
 
   return (

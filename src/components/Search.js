@@ -109,7 +109,7 @@ const Search = (props) => {
           <i className="fa fa-search nav-search-icon" aria-hidden="true"></i>
         </button>
       </form>
-      <span className="nav-error-span">{errorDiv}</span>
+      <div className="nav-error-div">{errorDiv}</div>
     </div>
   );
 

@@ -3,6 +3,11 @@
   color: #ef534f;
 }
 
-.nav-error-span {
+.nav-error-div {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   margin-left: 1rem;
+  margin-bottom: 1rem;
 }

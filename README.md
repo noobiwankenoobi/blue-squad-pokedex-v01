@@ -2,12 +2,6 @@
 
 ###### Built by Ross Hazelett
 
-#
-
-#
-
-#
-
 ## Purpose
 
 This app was built in response to a code challenge given to me by Blue Squad.

@@ -50,6 +50,20 @@ function Arrow(props) {
     } else return;
   };
 
+  // const handleKeyDown = (e) => {
+  //   e.preventDefault();
+  //   console.log("Keydown is running");
+  //   if (e.keyCode === 37 && currentPokemonId >= 2 && direction === "left") {
+  //     getPokemon();
+  //   } else if (
+  //     e.keyCode === 39 &&
+  //     currentPokemonId >= 0 &&
+  //     direction === "right"
+  //   ) {
+  //     getPokemon();
+  //   }
+  // };
+
   // JSX of left and right arrow
   const leftArrow = (
     <div className="arrow-btn" onClick={onClick}>

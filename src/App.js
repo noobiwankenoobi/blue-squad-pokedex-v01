@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./App.css";
 // Components
 import Navbar from "./components/Navbar";
-import SearchBar from "./components/SearchBar";
+import Search from "./components/Search";
 import PokedexCard from "./components/PokedexCard";
 import Arrow from "./components/Arrow";
 import Footer from "./components/Footer";
@@ -32,7 +32,7 @@ function App() {
   );
 
   // SEARCHBAR JSX
-  let searchBar = <SearchBar changeCurrentPokemon={setCurrentPokemon} />;
+  let searchBar = <Search changeCurrentPokemon={setCurrentPokemon} />;
 
   // Logic for whether the main searchbar or the pokedex gets rendered
   let pokedexOrSearch = currentPokemon.name ? pokedexDiv : searchBar;

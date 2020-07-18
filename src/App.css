@@ -30,6 +30,8 @@ p {
 @import "./css/SearchBar.css";
 @import "./css/Title.css";
 @import "./css/Footer.css";
+@import "./css/LandingText.css";
+@import "./css/Errors.css";
 
 .App {
   display: flex;

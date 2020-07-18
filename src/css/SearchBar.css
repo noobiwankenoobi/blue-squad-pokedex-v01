@@ -1,8 +1,11 @@
 .searchbar-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
+  padding: 3rem;
+  text-align: center;
   /* border: 2px solid #ffcb01; */
   box-sizing: border-box;
   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */

@@ -63,6 +63,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  background: rgba(173, 216, 229, 0.3);
 }
 
 .info-row {
@@ -76,6 +77,7 @@
   margin-right: 0.5rem;
   letter-spacing: 0.1rem;
   color: black;
+  opacity: 70%;
 }
 
 .info-field-content {

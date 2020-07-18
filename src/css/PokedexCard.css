@@ -77,10 +77,14 @@
 .info-field-title {
   margin-right: 0.5rem;
   letter-spacing: 0.1rem;
-  color: black;
+  color: rgba(0, 0, 0, 0.76);
+  /* color: rgb(12, 42, 82); */
+  line-height: 2rem;
   /* opacity: 70%; */
 }
 
 .info-field-content {
-  letter-spacing: 0.1rem;
+  /* color: rgba(0, 0, 0, 0.897); */
+  color: rgb(15, 52, 100);
+  line-height: 2rem;
 }

@@ -16,7 +16,7 @@ const Search = (props) => {
   // Error handling
   const [error, setError] = useState({
     errorCode: null,
-    message: "Error Test",
+    message: "",
   });
   const { message } = error;
 
@@ -48,7 +48,7 @@ const Search = (props) => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${search}`)
       .then((res) => {
-        setError({ error: { errorCode: null, message: "" } });
+        setError({ errorCode: null, message: "" });
         console.log("res.data =", res.data);
         handleData(res.data);
         // Only sets the form to empty on Success
@@ -61,7 +61,7 @@ const Search = (props) => {
   };
 
   const handleErrors = () => {
-    setError({ error: { errorCode: 404, message: "Can't find Pokemon" } });
+    setError({ errorCode: 404, message: "Can't find Pokemon" });
   };
 
   // onSubmit of search form

@@ -26,7 +26,7 @@ function Arrow(props) {
     direction === "right" ? currentPokemonId + 1 : currentPokemonId - 1;
 
   // API Call by Id
-  const getPokemonById = () => {
+  const getPokemon = () => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${newPokemonId}`)
       .then((res) => {
@@ -44,9 +44,9 @@ function Arrow(props) {
     e.preventDefault();
     // Axios Call based on id
     if (currentPokemonId >= 2 && direction === "left") {
-      getPokemonById();
+      getPokemon();
     } else if (currentPokemonId >= 0 && direction === "right") {
-      getPokemonById();
+      getPokemon();
     } else return;
   };
 

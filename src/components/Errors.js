@@ -9,7 +9,6 @@ const Errors = (props) => {
       <h3>{errorMessage}</h3>
     </div>
   );
-  console.log("errorMessage is", props);
 
   return errorDiv;
 };

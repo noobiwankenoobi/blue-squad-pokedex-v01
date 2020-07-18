@@ -32,7 +32,6 @@ const Search = (props) => {
     };
     // Set the current Pokemon to the pokemon object we just created
     changeCurrentPokemon(pokemon);
-    console.log("Pokemon =", pokemon);
   };
 
   // onChange of search bar input
@@ -44,18 +43,15 @@ const Search = (props) => {
   const search = searchString.toLowerCase();
 
   // AXIOS Gets Pokemon from search string
-  const getPokemonByName = () => {
+  const getPokemon = () => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${search}`)
       .then((res) => {
         setError({ errorCode: null, message: "" });
-        console.log("res.data =", res.data);
         handleData(res.data);
-        // Only sets the form to empty on Success
         setSearchString("");
       })
       .catch((err) => {
-        console.error(err);
         handleErrors();
       });
   };
@@ -70,7 +66,7 @@ const Search = (props) => {
     if (!searchString || searchString === "") {
       return;
     } else {
-      getPokemonByName();
+      getPokemon();
     }
   };
 
@@ -113,6 +109,7 @@ const Search = (props) => {
           <i className="fa fa-search nav-search-icon" aria-hidden="true"></i>
         </button>
       </form>
+      <span className="nav-error-span">{errorDiv}</span>
     </div>
   );
 

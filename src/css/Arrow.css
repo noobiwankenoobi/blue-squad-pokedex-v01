@@ -6,7 +6,7 @@
   padding: 1rem;
   cursor: pointer;
   color: #ffcb01;
-  transition: all ease-in 0.2s;
+  transition: all ease-in 0.1s;
 }
 
 .arrow-btn:hover {

@@ -9,10 +9,7 @@ const Footer = () => {
           <br /> runs on the
         </h5>
         <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">
-          <img
-            src="https://pokeapi.co/static/pokeapi_256.888baca4.png"
-            alt="pokeapi"
-          ></img>
+          <img src={require("../img/poke-api.png")} alt="pokeapi"></img>
         </a>
       </div>
     </div>

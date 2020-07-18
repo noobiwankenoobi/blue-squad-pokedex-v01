@@ -8,6 +8,15 @@ function PokedexCard(props) {
   // Make name capitalized
   const capName = name.charAt(0).toUpperCase() + name.substring(1);
 
+  // Stat Conversion functions
+  const hectToKilo = (weight) => {
+    return weight / 10;
+  };
+
+  const deciToMeter = (height) => {
+    return height / 10;
+  };
+
   // Pokedex JSX
   let pokedexcard = (
     <div className="pokedex-card">
@@ -24,16 +33,16 @@ function PokedexCard(props) {
             <h2 className="info-field-content">{id}</h2>
           </div>
           <div className="info-row">
-            <p className="info-field-title">Name</p>
+            <p className="info-field-title">NAME</p>
             <h3 className="info-field-content">{capName}</h3>
           </div>
           <div className="info-row">
-            <p className="info-field-title">Height</p>
-            <h3 className="info-field-content">{height}</h3>
+            <p className="info-field-title">HEIGHT</p>
+            <h3 className="info-field-content">{deciToMeter(height)}m</h3>
           </div>
           <div className="info-row">
-            <p className="info-field-title">Weight</p>
-            <h3 className="info-field-content">{weight}</h3>
+            <p className="info-field-title">WEIGHT</p>
+            <h3 className="info-field-content">{hectToKilo(weight)}kg</h3>
           </div>
         </div>
       </div>

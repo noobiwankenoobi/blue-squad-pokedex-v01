@@ -5,6 +5,7 @@
   top: 0;
   position: fixed;
   width: 100vw;
+  height: 4rem;
   background-color: #ffcb01;
   padding: 2rem;
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);

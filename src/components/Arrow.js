@@ -15,22 +15,19 @@ function Arrow(props) {
       weight: data.weight,
       imageUrl: data.sprites.front_default,
     };
-
     // Sets current pokemon
     changeCurrentPokemon(pokemon);
-    console.log("Pokemon =", pokemon);
   };
 
   // Iterate id of next pokemon up or down 1 based on direction of arrow
-  const newPokemonId =
-    direction === "right" ? currentPokemonId + 1 : currentPokemonId - 1;
+  const prevPokemon = currentPokemonId - 1;
+  const nextPokemon = currentPokemonId + 1;
 
   // API Call by Id
-  const getPokemon = () => {
+  const getPokemon = (pokemonIdent) => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${newPokemonId}`)
+      .get(`https://pokeapi.co/api/v2/pokemon/${pokemonIdent}`)
       .then((res) => {
-        console.log("res.data =", res.data);
         handleData(res.data);
       })
       .catch((err) => {
@@ -44,25 +41,11 @@ function Arrow(props) {
     e.preventDefault();
     // Axios Call based on id
     if (currentPokemonId >= 2 && direction === "left") {
-      getPokemon();
+      getPokemon(prevPokemon);
     } else if (currentPokemonId >= 0 && direction === "right") {
-      getPokemon();
+      getPokemon(nextPokemon);
     } else return;
   };
-
-  // const handleKeyDown = (e) => {
-  //   e.preventDefault();
-  //   console.log("Keydown is running");
-  //   if (e.keyCode === 37 && currentPokemonId >= 2 && direction === "left") {
-  //     getPokemon();
-  //   } else if (
-  //     e.keyCode === 39 &&
-  //     currentPokemonId >= 0 &&
-  //     direction === "right"
-  //   ) {
-  //     getPokemon();
-  //   }
-  // };
 
   // JSX of left and right arrow
   const leftArrow = (

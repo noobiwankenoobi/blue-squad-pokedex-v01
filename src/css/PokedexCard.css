@@ -32,7 +32,7 @@
   object-fit: contain;
   height: 14rem;
   width: 16rem;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.452);
   border-radius: 0.2rem;
   background: lightblue;
   margin: 2rem;
@@ -57,7 +57,7 @@
 .info-box {
   width: 16rem;
   height: 14rem;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.452);
   border-radius: 0.2rem;
   margin: 2rem;
   display: flex;
@@ -72,6 +72,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 16rem;
 }
 
 .info-field-title {

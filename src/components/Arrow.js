@@ -1,40 +1,12 @@
 import React from "react";
-import axios from "axios";
 
 // ARROW COMPONENT
 function Arrow(props) {
-  const { changeCurrentPokemon, currentPokemonId, direction } = props;
-
-  // Takes data back from api call, sets the currentPokemon in the state
-  const handleData = (data) => {
-    // Create a pokemon object with only the parts of the returned data you need
-    const pokemon = {
-      name: data.name,
-      id: data.id,
-      height: data.height,
-      weight: data.weight,
-      imageUrl: data.sprites.front_default,
-    };
-    // Sets current pokemon
-    changeCurrentPokemon(pokemon);
-  };
+  const { currentPokemonId, direction, getPokemon } = props;
 
   // Iterate id of next pokemon up or down 1 based on direction of arrow
   const prevPokemon = currentPokemonId - 1;
   const nextPokemon = currentPokemonId + 1;
-
-  // API Call by Id
-  const getPokemon = (pokemonIdent) => {
-    axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${pokemonIdent}`)
-      .then((res) => {
-        handleData(res.data);
-      })
-      .catch((err) => {
-        // sorry, pokemon not found
-        console.error(err);
-      });
-  };
 
   // Makes api call on arrow click, doesn't allow negative Id numbers when clicking left
   const onClick = (e) => {

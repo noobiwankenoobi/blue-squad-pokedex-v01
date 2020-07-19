@@ -84,6 +84,7 @@ const Search = (props) => {
           placeholder="Enter name or #"
           value={searchString}
           onChange={handleChange}
+          maxlength="20"
         />
         <button className="search-btn" type="submit">
           <i className="fa fa-search search-icon" aria-hidden="true"></i>
@@ -104,6 +105,7 @@ const Search = (props) => {
           placeholder="Search..."
           value={searchString}
           onChange={handleChange}
+          maxlength="20"
         />
         <button className="nav-search-btn" type="submit">
           <i className="fa fa-search nav-search-icon" aria-hidden="true"></i>

@@ -32,7 +32,7 @@ In short, the primary requirements were:
 ## To Test Solution
 
 1. I deployed this app to Netlify [here](https://bluesquad-pokedex-ross-hazelett.netlify.app/)
-2. The Github repository is [here](https://github.com/noobiwankenoobi/blue-squad-pokedex-v01) - clone it and play around with it as much as you'd like
+2. The Github repository is [here](https://github.com/noobiwankenoobi/blue-squad-pokedex-v01) - clone or download project from here
 
 ## Planning materials
 

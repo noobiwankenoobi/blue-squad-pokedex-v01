@@ -32,8 +32,7 @@ In short, the primary requirements were:
 ## To Test Solution
 
 1. I deployed this app to Netlify [here](https://bluesquad-pokedex-ross-hazelett.netlify.app/)
-2. You can review the code on sandbox [here](https://codesandbox.io/s/blue-squad-pokedex-9x03y)
-3. The Github repository is [here](https://github.com/noobiwankenoobi/blue-squad-pokedex-v01)
+2. The Github repository is [here](https://github.com/noobiwankenoobi/blue-squad-pokedex-v01) - clone it and play around with it as much as you'd like
 
 ## Planning materials
 
@@ -42,7 +41,6 @@ In short, the primary requirements were:
 ## All Links
 
 - [Deployed App](https://bluesquad-pokedex-ross-hazelett.netlify.app/)
-- [Code Sandbox](https://codesandbox.io/s/blue-squad-pokedex-9x03y)
 - [Github Repo](https://github.com/noobiwankenoobi/blue-squad-pokedex-v01)
 - [PokeApi](https://pokeapi.co/)
 - [Challenge Prompt](https://drive.google.com/file/d/1G4Ry_1dIYk87ybahmjn7x-wruHT5339_/view?usp=sharing)
